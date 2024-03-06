@@ -12,6 +12,7 @@ body {
   background-color: #E1D4C9;
   margin: 0 auto;
   font-size: 16px;
+  color: #403F3D;
 }
 
 .container {
@@ -27,6 +28,11 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration-line: none;
+  color: #403F3D;
+}
+
 .nav-links {
   margin: auto 0;
 }
@@ -37,8 +43,24 @@ li {
   align-content: center;
 }
 
-.nav-links-list-item {
+.nav-links-list-link {
   cursor: pointer;
+  position: relative;
+}
+
+.nav-links-list-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  display: block;
+  background-color: #403F3D;
+  transition: all 0.3s ease-out;
+}
+
+.nav-links-list-link:hover:after {
+  width: 100%;
 }
 
 .nav-menu {
@@ -48,5 +70,11 @@ li {
 .nav-menu-inner {
   display: flex;
   gap: 8px;
+  align-items: end;
   cursor: pointer;
+  margin: 0;
+}
+ 
+.nav-menu-inner-text img {
+  line-height: 150%;
 }
