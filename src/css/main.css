@@ -15,6 +15,8 @@ body {
   color: #403F3D;
 }
 
+/* header start*/
+
 .container {
   padding: 20px 40px;
 }
@@ -78,3 +80,40 @@ a {
 .nav-menu-inner-text img {
   line-height: 150%;
 }
+
+/* header end*/
+
+/* enjoy section start*/
+
+.enjoy .container {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.enjoy-offer {
+  position: absolute;
+  top: 120px;
+  left: 140px;
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.enjoy-offer-title {
+  font-size: 72px;
+  line-height: 105%;
+  color: #E1D4C9;
+}
+
+.enjoy-offer-title i {
+  color: #B0907A;
+}
+/* enjoy section end*/
