@@ -52,6 +52,7 @@ a {
 
 .nav-links-list-link:after {
   content: "";
+  margin-top: 5px;
   position: absolute;
   left: 0;
   width: 0;
@@ -68,15 +69,35 @@ a {
 .nav-menu {
   margin: auto 0;
 }
-
+ 
 .nav-menu-inner {
   display: flex;
+  align-content: start;
   gap: 8px;
-  align-items: end;
-  cursor: pointer;
   margin: 0;
 }
- 
+
+.nav-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu:after {
+  content: "";
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: #403F3D;
+  transition: all 0.3s ease-out;
+}
+
+.nav-menu:hover:after {
+  width: 100%;
+}
+
 .nav-menu-inner-text img {
   line-height: 150%;
 }
@@ -116,4 +137,41 @@ a {
 .enjoy-offer-title i {
   color: #B0907A;
 }
+
+.enjoy-offer-subtitle {
+  line-height: 150%;
+  color: #E1D4C9;
+  font-weight: 300;
+}
+
+.enjoy-offer-button {
+  position: relative;
+  background-color: #E1D4C9;
+  width: 200px;
+  border-radius: 100px;
+  line-height: 150%;
+  height: 64px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+.enjoy-offer-button img {
+  position: absolute;
+  top: 20px;
+  left: 125px;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.enjoy-offer-button:hover img {
+  visibility: inherit;
+  margin-right: 0.5px;
+}
+
+.enjoy-offer-button:hover {
+  padding-right: 10px;
+}
+
 /* enjoy section end*/
