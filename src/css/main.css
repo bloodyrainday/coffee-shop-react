@@ -202,13 +202,42 @@ a {
   align-self: center;
 }
 
+.arrow {
+  display: block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.arrow.left {
+  background: url('../icons/button-icon-left.svg');
+}
+
+.arrow.right {
+  background: url('../icons/button-icon-right.svg');
+}
+
+.arrow.left:hover {
+  background: url('../icons/button-icon-left-hover.svg');
+}
+
+.arrow.right:hover {
+  background: url('../icons/button-icon-right-hover.svg');
+}
+
 .favorite-slider-center-line {
   text-align: center;
 }
 
 .favorite-slider-button.right {
+  display: flex;
   align-self: center;
-  text-align: end;
+  justify-content: end;
+}
+
+.favorite-slider-button img {
+  cursor: pointer;
 }
 
 .favorite-slider-center-line-slide img{

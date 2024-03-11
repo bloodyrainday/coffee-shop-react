@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from './Image';
-import leftSliderButton from '../icons/button-icon-left.svg';
-import rightSliderButton from '../icons/button-icon-right.svg';
 import slideImage from '../images/coffee-slider-1.png';
 
 class Favorite extends React.Component {
+  
   render() {
+    
     return (
         <section className='favorite'>
           <div className='container'>
@@ -15,7 +15,7 @@ class Favorite extends React.Component {
             <div className='favorite-slider'>
 
               <div className='favorite-slider-button left'>
-                <Image image={leftSliderButton}/>
+                <span className='arrow left'></span>
               </div>
 
               <div className='favorite-slider-center'>
@@ -34,7 +34,7 @@ class Favorite extends React.Component {
               </div>
 
               <div className='favorite-slider-button right'>
-              <Image image={rightSliderButton}/>
+                <span className='arrow right'></span>
               </div>
 
             </div>
