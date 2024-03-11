@@ -236,15 +236,11 @@ a {
   justify-content: end;
 }
 
-.favorite-slider-button img {
-  cursor: pointer;
-}
-
 .favorite-slider-center-line-slide img{
   margin-bottom: 20px;
 }
 
-.favorite-slider-center-line-slide-desc {
+.favorite-slider-center-line-slide-info {
   width: 480px;
   display: flex;
   flex-direction: column;

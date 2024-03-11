@@ -5,6 +5,7 @@ import Favorite from './components/Favorite';
 import menu from './icons/coffee-cup.svg';
 
 class App extends React.Component {
+  
   render() {
     return (
       <div className='wpapper'>

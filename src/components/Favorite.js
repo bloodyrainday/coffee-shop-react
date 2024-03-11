@@ -1,9 +1,38 @@
 import React from 'react';
-import Image from './Image';
-import slideImage from '../images/coffee-slider-1.png';
+import Sliders from './Sliders';
+
 
 class Favorite extends React.Component {
-  
+  constructor(props) {
+    super(props)
+    this.state = {
+      sliders: [
+        {
+          id: 1,
+          img: 'coffee-slider-1.png',
+          title: 'S’mores Frappuccino',
+          desc: 'This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.',
+          price: '$5.50'
+        },
+
+        {
+          id: 2,
+          img: 'coffee-slider-2.png',
+          title: 'Caramel Macchiato',
+          desc: 'Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.',
+          price: '$5.00'
+        },
+
+        {
+          id: 3,
+          img: 'coffee-slider-3.png',
+          title: 'Ice coffee',
+          desc: 'A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.',
+          price: '$4.50'
+        }
+      ]
+    }
+  }
   render() {
     
     return (
@@ -21,14 +50,16 @@ class Favorite extends React.Component {
               <div className='favorite-slider-center'>
                 <div className='favorite-slider-center-line'>
 
-                  <div className='favorite-slider-center-line-slide'>
+                <Sliders sliders={this.state.sliders} />
+                  {/*<div className='favorite-slider-center-line-slide'>
+                    
                     <Image image={slideImage}/>
                     <div className='favorite-slider-center-line-slide-desc'>
                       <h4 className='favorite-slider-center-line-slide-info-name'>S’mores Frappuccino</h4>
                       <p className='favorite-slider-center-line-slide-info-desc'>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                       <p className='favorite-slider-center-line-slide-info-price'>$5.50</p>
                     </div>
-                  </div>
+                  </div>*/}
 
                 </div>
               </div>
