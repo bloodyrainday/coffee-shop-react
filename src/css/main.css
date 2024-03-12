@@ -195,7 +195,7 @@ a {
 
 .favorite-slider {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr minmax(348px, 480px) 1fr;
 }
 
 .favorite-slider-button.left {
@@ -226,6 +226,10 @@ a {
   background: url('../icons/button-icon-right-hover.svg');
 }
 
+.favorite-slider-center {
+  overflow: hidden;
+}
+
 .favorite-slider-center-line {
   text-align: center;
 }
@@ -240,11 +244,14 @@ a {
   margin-bottom: 20px;
 }
 
+.favorite-slider-center-line-slide {
+  display: flex;
+}
+
 .favorite-slider-center-line-slide-info {
   width: 480px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 16px;
   margin: 0 auto;
 }
