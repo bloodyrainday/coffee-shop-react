@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Enjoy from './components/Enjoy';
 import Favorite from './components/Favorite';
 import menu from './icons/coffee-cup.svg';
+import Cozy from './components/Cozy';
 
 class App extends React.Component {
   
@@ -12,6 +13,7 @@ class App extends React.Component {
         <Header />
         <Enjoy image={menu}/>
         <Favorite />
+        <Cozy />
       </div>
     )
   }

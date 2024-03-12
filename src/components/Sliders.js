@@ -36,7 +36,7 @@ const Sliders = ({sliders}) => {
 
           <div className='favorite-switch-wrapper'>
             {sliders.map((item, index) => (
-              <span className={`favorite-switch ${index === activeIndex ? 'active' : ''}`}></span>
+              <span className={`favorite-switch ${index === activeIndex ? 'active' : ''}`} key={item.id}></span>
             ))}
           </div>
           
