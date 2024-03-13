@@ -4,7 +4,7 @@ import mobile from "../images/mobile-screens.png"
 export default class Download extends Component {
   render() {
     return (
-      <section className='download'>
+      <section className='download' id='download'>
         <div className='container'>
 
           <div className='download-column1'>

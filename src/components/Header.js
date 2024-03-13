@@ -18,10 +18,10 @@ class Header extends React.Component {
 
             <div className='nav-links'>
               <ul className='nav-links-list'>
-                <a className='nav-links-list-link' href='##'><li className='nav-links-list-link-item'>Favorite coffee</li></a>
-                <a className='nav-links-list-link' href='##'><li className='nav-links-list-link-item'>About</li></a>
-                <a className='nav-links-list-link' href='##'><li className='nav-links-list-link-item'>Mobile app</li></a>
-                <a className='nav-links-list-link' href='##'><li className='nav-links-list-link-item'>Contact us</li></a>
+                <a className='nav-links-list-link' href='./#favorite'><li className='nav-links-list-link-item'>Favorite coffee</li></a>
+                <a className='nav-links-list-link' href='./#cozy'><li className='nav-links-list-link-item'>About</li></a>
+                <a className='nav-links-list-link' href='./#download'><li className='nav-links-list-link-item'>Mobile app</li></a>
+                <a className='nav-links-list-link' href='./#footer'><li className='nav-links-list-link-item'>Contact us</li></a>
               </ul>
             </div>
 

@@ -21,7 +21,7 @@ export default class Cozy extends Component {
 
   render() {
     return (
-      <section className='cozy'>
+      <section className='cozy' id='cozy'>
         <div className='container'>
           <h4 className='cozy-title'>Resource is <i>the perfect and cozy place</i> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h4>
           <div className='cozy-gallery'>

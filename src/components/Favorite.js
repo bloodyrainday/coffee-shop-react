@@ -36,12 +36,12 @@ class Favorite extends React.Component {
   render() {
 
     return (
-        <section className='favorite'>
+        <section className='favorite' id='favorite'>
           <div className='container'>
 
             <h3 className='favorite-title'>Choose your <i>favorite</i> coffee</h3>
 
-                <Sliders sliders={this.state.sliders} />
+              <Sliders sliders={this.state.sliders} />
 
           </div>
         </section>
