@@ -7,7 +7,7 @@ export default class Footer extends Component {
         <div className='container'>
 
           <div className='footer-column1'>
-            <h4 className='footer-column1-title'>Sip, Savor, Smile. It’s coffee time!</h4>
+            <h4 className='footer-column1-title'>Sip, Savor, Smile. <i>It’s coffee time!</i></h4>
             <div className='footer-column1-icons'>
               <span className='footer-column1-icons-twit'></span>
               <span className='footer-column1-icons-inst'></span>
