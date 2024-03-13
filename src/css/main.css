@@ -350,6 +350,61 @@ a {
 
 /* download section start */
 
+.download .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.download-column1 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.download-column1-title {
+  font-size: 60px;
+  line-height: 125%;
+}
+
+.download-column1-title i {
+  color: #B0907A;
+}
+
+.download-column1-desc {
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.download-column1-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.download-column1-button-apple {
+  background: url("../icons/default-apple.svg");
+  display: block;
+  width: 200px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.download-column1-button-apple:hover {
+  background: url("../icons/hover-apple.svg");
+}
+
+.download-column1-button-google {
+  background: url("../icons/default-google.svg");
+  display: block;
+  width: 200px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.download-column1-button-google:hover {
+  background: url("../icons/hover-google.svg");
+} 
 
 /* download section end */
