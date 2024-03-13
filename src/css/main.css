@@ -296,6 +296,10 @@ a {
 
 /* cozy section start */
 
+.cozy {
+  margin-bottom: 100px;
+}
+
 .cozy-title {
   font-weight: 600;
   font-size: 60px;
@@ -343,3 +347,9 @@ a {
 }
 
 /* cozy section end */
+
+/* download section start */
+
+
+
+/* download section end */

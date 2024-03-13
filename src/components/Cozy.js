@@ -29,8 +29,8 @@ export default class Cozy extends Component {
           <div className='cozy-gallery-wrapper'>
             {this.state.gallery.map(item => {
               return (
-                <div className='cozy-gallery-wrapper-inner'>
-                  <img className='cozy-gallery-image' src={item.image} alt='gallery-img' key={item.id}/>
+                <div className='cozy-gallery-wrapper-inner' key={item.id}>
+                  <img className='cozy-gallery-image' src={item.image} alt='gallery-img'/>
                 </div>
               )
             })}
@@ -39,8 +39,8 @@ export default class Cozy extends Component {
           <div className='cozy-gallery-wrapper'>
             {this.state.gallery2.map(item2 => {
               return (
-                <div className='cozy-gallery-wrapper-inner'>
-                  <img className='cozy-gallery-image' src={item2.image} alt='gallery-img' key={item2.id}/>
+                <div className='cozy-gallery-wrapper-inner' key={item2.id}>
+                  <img className='cozy-gallery-image' src={item2.image} alt='gallery-img'/>
                 </div>
               )
             })}
