@@ -350,6 +350,10 @@ a {
 
 /* download section start */
 
+.download {
+  margin-bottom: 100px;
+}
+
 .download .container {
   display: grid;
   grid-template-columns: 1fr 1fr;

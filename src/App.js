@@ -5,6 +5,7 @@ import Favorite from './components/Favorite';
 import menu from './icons/coffee-cup.svg';
 import Cozy from './components/Cozy';
 import Download from './components/Download';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Favorite />
         <Cozy />
         <Download />
+        <Footer />
       </div>
     )
   }
