@@ -32,6 +32,8 @@ class Header extends React.Component {
               </a>
             </div>
 
+            <div className="nav-menu-burger" onClick={() => document.querySelector('.nav-menu-burger').classList.toggle('active')}></div>
+
           </nav>
           </div>
           
