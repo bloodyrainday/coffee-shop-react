@@ -12,8 +12,8 @@ class App extends React.Component {
       <div className='wpapper'>
         <Header />
         <Routes>
-          <Route path="/bloodyrainday.github.io/coffee-shop-react" element={<Home/>}/>
-          <Route path="/bloodyrainday.github.io/coffee-shop-react/menu" element={<Menu/>}/>
+          <Route path="/coffee-shop-react" element={<Home/>}/>
+          <Route path="/coffee-shop-react/menu" element={<Menu/>}/>
         </Routes>
         <Footer />
       </div>
