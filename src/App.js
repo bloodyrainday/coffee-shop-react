@@ -1,11 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
-import Enjoy from './components/Enjoy';
-import Favorite from './components/Favorite';
-import menu from './icons/coffee-cup.svg';
-import Cozy from './components/Cozy';
-import Download from './components/Download';
 import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Menu from './pages/Menu';
 
 class App extends React.Component {
   
@@ -13,10 +11,10 @@ class App extends React.Component {
     return (
       <div className='wpapper'>
         <Header />
-        <Enjoy image={menu}/>
-        <Favorite />
-        <Cozy />
-        <Download />
+        <Routes>
+          <Route path="/coffee-shop-react" element={<Home/>}/>
+          <Route path="/coffee-shop-react/menu" element={<Menu/>}/>
+        </Routes>
         <Footer />
       </div>
     )

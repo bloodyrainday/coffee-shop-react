@@ -11,7 +11,7 @@ class Header extends React.Component {
             <nav>
 
             <div className='nav-logo'>
-              <a className='nav-logo-link' href="##">
+              <a className='nav-logo-link' href="/coffee-shop-react">
                 <Image image={logo}/>
               </a>
             </div>
@@ -26,10 +26,10 @@ class Header extends React.Component {
             </div>
 
             <div className='nav-menu'>
-              <div className='nav-menu-inner'>
+              <a className='nav-menu-inner' href='/coffee-shop-react/menu'>
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>
-              </div>
+              </a>
             </div>
 
           </nav>
