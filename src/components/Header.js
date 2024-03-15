@@ -11,7 +11,7 @@ class Header extends React.Component {
             <nav>
 
             <div className='nav-logo'>
-              <a className='nav-logo-link' href="/coffee-shop-react">
+              <a className='nav-logo-link' href="/bloodyrainday.github.io/coffee-shop-react">
                 <Image image={logo}/>
               </a>
             </div>
@@ -26,7 +26,7 @@ class Header extends React.Component {
             </div>
 
             <div className='nav-menu'>
-              <a className='nav-menu-inner' href='/coffee-shop-react/menu'>
+              <a className='nav-menu-inner' href='/bloodyrainday.github.io/coffee-shop-react/menu'>
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>
               </a>
