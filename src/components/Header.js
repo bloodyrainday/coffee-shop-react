@@ -2,9 +2,14 @@ import React from 'react';
 import Image from './Image';
 import logo from '../icons/logo.svg';
 import menu from '../icons/coffee-cup.svg';
+import Burger from './Burger';
 
-class Header extends React.Component {
-  render() {
+function Header() {
+    const [burgerActive, setBurgerActive] = React.useState(false);
+    const onClickBurger = () => {
+      setBurgerActive(!burgerActive)
+    }
+  
     return (
         <header className='header'>
           <div className='container'>
@@ -32,14 +37,13 @@ class Header extends React.Component {
               </a>
             </div>
 
-            <div className="nav-menu-burger" onClick={() => document.querySelector('.nav-menu-burger').classList.toggle('active')}></div>
-
+            <div className={`nav-menu-burger ${burgerActive === true ? "active" : ""}`} onClick={() => onClickBurger()}>
+            </div>
+            {burgerActive === true && <Burger />}
           </nav>
           </div>
-          
         </header>
-    )
-  }
+  )
 }
 
 export default Header

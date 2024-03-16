@@ -9,7 +9,7 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className='wpapper'>
+      <div className='wrapper'>
         <Header />
         <Routes>
           <Route path="/coffee-shop-react" element={<Home/>}/>
