@@ -39,7 +39,7 @@ function Header() {
 
             <div className={`nav-menu-burger ${burgerActive === true ? "active" : ""}`} onClick={() => onClickBurger()}>
             </div>
-            {burgerActive === true && <Burger />}
+            {burgerActive === true && <Burger onClickBurger={onClickBurger}/>}
           </nav>
           </div>
         </header>

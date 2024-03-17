@@ -83,6 +83,10 @@ a {
   margin: 0;
 }
 
+.nav-menu-burger {
+  display: none;
+}
+
 .nav-menu {
   position: relative;
   cursor: pointer;
@@ -581,8 +585,11 @@ a {
 /* burger menu start */
 
 .burger-wrapper {
-  position: absolute;
+  scroll-behavior: initial;
+  position: fixed;
   top: 100px;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100vh;
   background-color: #E1D4C9;
