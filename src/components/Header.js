@@ -7,10 +7,12 @@ import Burger from './Burger';
 function Header() {
     const [burgerActive, setBurgerActive] = React.useState(false);
     const onClickBurger = () => {
-      setBurgerActive(!burgerActive)
+      setBurgerActive(!burgerActive);
+      document.body.classList.toggle('lock')
     }
   
     return (
+      <>
         <header className='header'>
           <div className='container'>
             <nav>
@@ -39,10 +41,12 @@ function Header() {
 
             <div className={`nav-menu-burger ${burgerActive === true ? "active" : ""}`} onClick={() => onClickBurger()}>
             </div>
-            {burgerActive === true && <Burger onClickBurger={onClickBurger}/>}
+            
           </nav>
           </div>
         </header>
+        {burgerActive === true && <Burger onClickBurger={onClickBurger}/> }
+      </>
   )
 }
 
