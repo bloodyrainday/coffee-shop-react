@@ -44,7 +44,7 @@
 
 .clicked {
   background-color: #665F55;
-  color: #E1D4C9;;
+  color: #E1D4C9;
 }
 
 .clicked .menu-tabs-tab-circle {
@@ -65,12 +65,44 @@
   cursor: default;
 }
 
+.menu-tabs-tab:hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+  transition: all 0.5s ease;
+}
+
+.menu-tabs-tab:hover .menu-tabs-tab-circle {
+  background-color: #E1D4C9;
+}
+
+.menu-collection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
 .menu-collection-item {
   width: 310px;
   height: 506px;
   border-radius: 40px;
   border: 2px solid #C1B6AD;
+  cursor: pointer;
+}
+
+.menu-collection-item-img-wrapper {
+  border-radius: 40px;
   overflow: hidden;
+}
+
+.menu-collection-item-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.menu-collection-item:hover img {
+  transition: transform 0.5s ease-out;
+  transform: scale(1.0);
 }
 
 .menu-collection-item-caption {
