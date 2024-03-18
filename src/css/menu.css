@@ -1,0 +1,95 @@
+.menu-title {
+  font-size: 60px;
+  line-height: 125%;
+}
+
+.menu-title i {
+  color: #B0907A;
+}
+
+.menu-tabs-tab-circle-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.menu-tabs-tab-circle-icon.coffee {
+  background: url("../icons/coffee.svg");
+}
+
+.menu-tabs-tab-circle-icon.tea{
+  background: url("../icons/tea.svg");
+}
+
+.menu-tabs-tab-circle-icon.dessert {
+  background: url("../icons/dessert.svg");
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.menu-tabs-tab {
+  border: 1px solid #C1B6AD;
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: #665F55;
+  color: #E1D4C9;;
+}
+
+.clicked .menu-tabs-tab-circle {
+  background-color: #E1D4C9;
+}
+
+.menu-tabs-tab-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #C1B6AD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-tabs-tab.clicked:hover {
+  cursor: default;
+}
+
+.menu-collection-item {
+  width: 310px;
+  height: 506px;
+  border-radius: 40px;
+  border: 2px solid #C1B6AD;
+  overflow: hidden;
+}
+
+.menu-collection-item-caption {
+  padding: 20px;
+}
+
+.menu-collection-item-caption-title {
+  font-size: 24px;
+  line-height: 125%;
+  margin-bottom: 12px;
+}
+
+.menu-collection-item-caption-desc {
+  line-height: 150%;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.menu-collection-item-caption-price {
+  font-size: 24px;
+  line-height: 125%;
+}
