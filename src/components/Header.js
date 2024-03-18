@@ -6,6 +6,10 @@ import Burger from './Burger';
 
 function Header() {
     const [burgerActive, setBurgerActive] = React.useState(false);
+    const [menuButtonClicked, setMenuButtonClicked] = React.useState(false);
+    const onClickMenuButton = () => {
+      setMenuButtonClicked(true);
+    }
     const onClickBurger = () => {
       setBurgerActive(!burgerActive);
       document.body.classList.toggle('lock')
@@ -32,7 +36,7 @@ function Header() {
               </ul>
             </div>
 
-            <div className='nav-menu'>
+            <div className={`nav-menu ${menuButtonClicked === true ? 'click' : ""}`} onClick={() => onClickMenuButton()}>
               <a className='nav-menu-inner' href="/coffee-shop-react/menu">
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>

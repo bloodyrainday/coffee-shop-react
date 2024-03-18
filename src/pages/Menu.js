@@ -96,55 +96,55 @@ function Menu() {
       image: require("../images/dessert-1.png"),
       title: "Marble cheesecake",
       desc: "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
-      price: 7
+      price: 3.5
     },
     {
       id: 2,
       image: require("../images/dessert-2.png"),
-      title: "Kahlua coffee",
-      desc: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
-      price: 7
+      title: "Red velvet",
+      desc: "Layer cake with cream cheese frosting",
+      price: 4
     },
     {
       id: 3,
       image: require("../images/dessert-3.png"),
-      title: "Honey raf",
-      desc: "Espresso with frothed milk, cream and aromatic honey",
-      price: 5.5
+      title: "Cheesecakes",
+      desc: "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
+      price: 4.5
     },
     {
       id: 4,
       image: require("../images/dessert-4.png"),
-      title: "Ice cappuccino",
-      desc: "Cappuccino with soft thick foam in summer version with ice",
-      price: 5
+      title: "Creme brulee",
+      desc: "Delicate creamy dessert in a caramel basket with wild berries",
+      price: 4
     },
     {
       id: 5,
       image: require("../images/dessert-5.png"),
-      title: "Espresso",
-      desc: "Classic black coffee",
+      title: "Pancakes",
+      desc: "Tender pancakes with strawberry jam and fresh strawberries",
       price: 4.5
     },
     {
       id: 6,
       image: require("../images/dessert-6.png"),
-      title: "Latte",
-      desc: "Espresso coffee with the addition of steamed milk and dense milk foam",
-      price: 5.5
+      title: "Honey cake",
+      desc: "Classic honey cake with delicate custard",
+      price: 4.5
     },
     {
       id: 7,
       image: require("../images/dessert-7.png"),
-      title: "Latte macchiato",
-      desc: "Espresso with frothed milk and chocolate",
+      title: "Chocolate cake",
+      desc: "Cake with hot chocolate filling and nuts with dried apricots",
       price: 5.5
     },
     {
       id: 8,
       image: require("../images/dessert-8.png"),
-      title: "Coffee with cognac",
-      desc: "Fragrant black coffee with cognac and whipped cream",
+      title: "Black forest",
+      desc: "A combination of thin sponge cake with cherry jam and light chocolate mousse",
       price: 6.5
     }
   ]
@@ -211,6 +211,23 @@ function Menu() {
               {
                 clicked === 1 && (
                   tea.map((item, index) => (
+                    <div className='menu-collection-item' key={item.id}>
+                      <div className='menu-collection-item-img-wrapper'>
+                        <img className='menu-collection-item-img' src={item.image} alt='menu-item'/>
+                      </div>
+                      <div className='menu-collection-item-caption'>
+                        <h4 className='menu-collection-item-caption-title'>{item.title}</h4>
+                        <p className='menu-collection-item-caption-desc'>{item.desc}</p>
+                        <span className='menu-collection-item-caption-price'>{`$${item.price.toFixed(2)}`}</span>
+                      </div>
+                    </div>
+                  ))
+                )
+              }
+
+              {
+                clicked === 2 && (
+                  dessert.map((item, index) => (
                     <div className='menu-collection-item' key={item.id}>
                       <div className='menu-collection-item-img-wrapper'>
                         <img className='menu-collection-item-img' src={item.image} alt='menu-item'/>
