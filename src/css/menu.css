@@ -132,7 +132,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: #403F3D;
+  background-color: rgba(64, 63, 61, 0.80);
   left: 0;
   top: 0;
   bottom: 0;
@@ -150,6 +150,10 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
+}
+
+.menu-item-content-column1 img {
+  border-radius: 40px;
 }
 
 .menu-item-content-column2 {
@@ -236,6 +240,17 @@
 }
 
 .menu-item-content-column2-size-buttons-btn:hover span {
+  background-color: #E1D4C9;
+  color: #403F3D;
+}
+
+.menu-item-content-column2-size-buttons-btn.chosen {
+  color: var(--text-light, #E1D4C9);
+  background-color: #665F55;
+  cursor: default;
+}
+
+.menu-item-content-column2-size-buttons-btn.chosen span {
   background-color: #E1D4C9;
   color: #403F3D;
 }

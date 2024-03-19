@@ -1,6 +1,18 @@
 import React from 'react'
 
-export default function MenuItem({coffee, showCard, setCardClicked}) {
+export default function MenuItem({ showCard, setCardClicked}) {
+  // let sum = Number(showCard.price).toFixed(2);
+  const [sum, setSum] = React.useState(Number(showCard.price));
+  const calculateSum = () => {
+    if (chosenItem === 1) {
+      setSum(sum + 0.5)
+    } else if (chosenItem === 2)
+    setSum(sum + 0.75);
+  }
+  const [chosenItem, setChosenItem] = React.useState(0);
+  const choose = (index) => {
+    setChosenItem(index)
+  }
   return (
     <div className='menu-item-wrapper' onClick={(e) => {
       e.target.classList.value === 'menu-item-wrapper' && document.body.classList.remove('lock');
@@ -15,16 +27,16 @@ export default function MenuItem({coffee, showCard, setCardClicked}) {
 
         <div className='menu-item-content-column2'>
           <div className="menu-item-content-column2-text">
-            <h4 className="menu-item-content-column2-text-title">Irish coffee</h4>
-            <p className="menu-item-content-column2-text-subtitle">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+            <h4 className="menu-item-content-column2-text-title">{showCard.title}</h4>
+            <p className="menu-item-content-column2-text-subtitle">{showCard.desc}</p>
           </div>
 
           <div className="menu-item-content-column2-size">
             <p className="menu-item-content-column2-size-text">Size</p>
             <div className="menu-item-content-column2-size-buttons">
-                <button className="menu-item-content-column2-size-buttons-btn"><span>S</span>200 ml</button>
-                <button className="menu-item-content-column2-size-buttons-btn"><span>M</span>300 ml</button>
-                <button className="menu-item-content-column2-size-buttons-btn"><span>L</span>400 ml</button>
+                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 0 ? 'chosen' : ''}`} onClick={() => choose(0)}><span>S</span>200 ml</button>
+                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 1 ? 'chosen' : ''}`} onClick={() => choose(1)}><span>M</span>300 ml</button>
+                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 2 ? 'chosen' : ''}`} onClick={() => choose(2)}><span>L</span>400 ml</button>
             </div>
           </div>
 
@@ -39,7 +51,8 @@ export default function MenuItem({coffee, showCard, setCardClicked}) {
 
           <div className="menu-item-content-column2-total">
               <p className="menu-item-content-column2-total-text">Total:</p>
-              <p className="menu-item-content-column2-total-price">$7.00</p>
+              <p className="menu-item-content-column2-total-price">{`$ ${chosenItem === 1 ? (Number(showCard.price) + 0.5).toFixed(2) :
+                                                                          chosenItem === 2 ? (Number(showCard.price) + 0.75).toFixed(2) : Number(showCard.price).toFixed(2)}`}</p>
           </div>
 
           <div className="menu-item-content-column2-warning">
