@@ -37,7 +37,7 @@ function Header() {
             </div>
 
             <div className={`nav-menu ${menuButtonClicked === true ? 'click' : ""}`} onClick={() => onClickMenuButton()}>
-              <a className='nav-menu-inner' href="/menu">
+              <a className='nav-menu-inner' href="/coffee-shop-react/menu">
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>
               </a>

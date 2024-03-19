@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/menu.css';
+import MenuItem from '../components/MenuItem';
 
 function Menu() {
   const coffee = [
@@ -148,12 +149,24 @@ function Menu() {
       price: 6.5
     }
   ]
+  const [cardClicked, setCardClicked] = React.useState(false);
+  const cardClickedButton = (card) => {
+    setShowCard(card);
+    document.body.classList.toggle('lock');
+    // console.log(showCart)
+    setCardClicked(true);
+  }
+  const [showCard, setShowCard] = React.useState({});
+  console.log(showCard)
   const [clicked, setClicked] = React.useState(0);
   const clickedButton = (index) => {
     setClicked(index)
   }
   return (
-    
+    <>
+      {cardClicked === true && (
+        <MenuItem setCardClicked={setCardClicked} showCard={showCard}/>
+      )}
       <main className='menu'>
         <div className='container'>
           <h1 className='menu-title'>Behind each of our cups hides an <i>amazing surprise</i></h1>
@@ -194,7 +207,7 @@ function Menu() {
               {
                 clicked === 0 && (
                   coffee.map((item, index) => (
-                    <div className='menu-collection-item' key={item.id}>
+                    <div className='menu-collection-item' key={item.id} onClick={() => cardClickedButton(item)}>
                       <div className='menu-collection-item-img-wrapper'>
                         <img className='menu-collection-item-img' src={item.image} alt='menu-item'/>
                       </div>
@@ -246,7 +259,7 @@ function Menu() {
 
         </div>
       </main>
-    
+    </>
   )
 }
 
