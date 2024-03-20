@@ -3,6 +3,7 @@ import Image from './Image';
 import logo from '../icons/logo.svg';
 import menu from '../icons/coffee-cup.svg';
 import Burger from './Burger';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [burgerActive, setBurgerActive] = React.useState(false);
@@ -22,9 +23,9 @@ function Header() {
             <nav>
 
             <div className='nav-logo'>
-              <a className='nav-logo-link' href="/coffee-shop-react">
+              <Link className='nav-logo-link' to="/coffee-shop-react">
                 <Image image={logo}/>
-              </a>
+              </Link>
             </div>
 
             <div className='nav-links'>
@@ -37,10 +38,10 @@ function Header() {
             </div>
 
             <div className={`nav-menu ${menuButtonClicked === true ? 'click' : ""}`} onClick={() => onClickMenuButton()}>
-              <a className='nav-menu-inner' href="/coffee-shop-react/menu">
+              <Link className='nav-menu-inner' to="/menu">
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>
-              </a>
+              </Link>
             </div>
 
             <div className={`nav-menu-burger ${burgerActive === true ? "active" : ""}`} onClick={() => onClickBurger()}>

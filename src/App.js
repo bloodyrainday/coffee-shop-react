@@ -13,7 +13,7 @@ class App extends React.Component {
         <Header />
         <Routes>
           <Route path="/coffee-shop-react" element={<Home/>}/>
-          <Route path="/coffee-shop-react/menu" element={<Menu/>}/>
+          <Route path="/menu" element={<Menu/>}/>
         </Routes>
         <Footer />
       </div>
