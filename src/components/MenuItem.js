@@ -21,9 +21,7 @@ export default function MenuItem({ showCard, setCardClicked}) {
   const [addSugar, setAddSugar] = React.useState(false);
   const [addCinnamon, setAddCinnamon] = React.useState(false);
   const [addSyrup, setAddSyrup] = React.useState(false);
-  if (addSugar === true) {
-    (Number(showCard.price) + 0.5).toFixed(2)
-  }
+  
   return (
     <div className='menu-item-wrapper' onClick={(e) => {
       e.target.classList.value === 'menu-item-wrapper' && document.body.classList.remove('lock');
@@ -45,18 +43,49 @@ export default function MenuItem({ showCard, setCardClicked}) {
           <div className="menu-item-content-column2-size">
             <p className="menu-item-content-column2-size-text">Size</p>
             <div className="menu-item-content-column2-size-buttons">
-                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 0 ? 'chosen' : ''}`} onClick={() => choose(0)}><span>S</span>200 ml</button>
-                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 1 ? 'chosen' : ''}`} onClick={() => choose(1)}><span>M</span>300 ml</button>
-                <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 2 ? 'chosen' : ''}`} onClick={() => choose(2)}><span>L</span>400 ml</button>
+              {showCard.type === 'dessert' ? (
+                <>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 0 ? 'chosen' : ''}`} onClick={() => choose(0)}><span>S</span>50 g</button>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 1 ? 'chosen' : ''}`} onClick={() => choose(1)}><span>M</span>100 g</button>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 2 ? 'chosen' : ''}`} onClick={() => choose(2)}><span>L</span>200 g</button>
+                </>
+              ) : (
+                <>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 0 ? 'chosen' : ''}`} onClick={() => choose(0)}><span>S</span>200 ml</button>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 1 ? 'chosen' : ''}`} onClick={() => choose(1)}><span>M</span>300 ml</button>
+                  <button className={`menu-item-content-column2-size-buttons-btn ${chosenItem === 2 ? 'chosen' : ''}`} onClick={() => choose(2)}><span>L</span>400 ml</button>
+                </>
+              )}
+                
             </div>
           </div>
 
           <div className="menu-item-content-column2-add">
             <p className="menu-item-content-column2-add-text">Additives</p>
             <div className="menu-item-content-column2-add-buttons">
-                <button className={`menu-item-content-column2-add-buttons-btn ${addSugar ? 'chosen' : ''}`} onClick={() => setAddSugar(!addSugar)}><span>1</span>Sugar</button>
-                <button className={`menu-item-content-column2-add-buttons-btn ${addCinnamon ? 'chosen' : ''}`} onClick={() => setAddCinnamon(!addCinnamon)}><span>2</span>Cinnamon</button>
-                <button className={`menu-item-content-column2-add-buttons-btn ${addSyrup ? 'chosen' : ''}`} onClick={() => setAddSyrup(!addSyrup)}><span>3</span>Syrup</button>
+              {showCard.type === 'coffee' ? (
+                <>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSugar ? 'chosen' : ''}`} onClick={() => setAddSugar(!addSugar)}><span>1</span>Sugar</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addCinnamon ? 'chosen' : ''}`} onClick={() => setAddCinnamon(!addCinnamon)}><span>2</span>Cinnamon</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSyrup ? 'chosen' : ''}`} onClick={() => setAddSyrup(!addSyrup)}><span>3</span>Syrup</button>
+                </>
+              ) : 
+              showCard.type === 'tea' ? (
+                <>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSugar ? 'chosen' : ''}`} onClick={() => setAddSugar(!addSugar)}><span>1</span>Sugar</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addCinnamon ? 'chosen' : ''}`} onClick={() => setAddCinnamon(!addCinnamon)}><span>2</span>Lemon</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSyrup ? 'chosen' : ''}`} onClick={() => setAddSyrup(!addSyrup)}><span>3</span>Syrup</button>
+                </>
+              ) : 
+              (
+                <>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSugar ? 'chosen' : ''}`} onClick={() => setAddSugar(!addSugar)}><span>1</span>Berries</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addCinnamon ? 'chosen' : ''}`} onClick={() => setAddCinnamon(!addCinnamon)}><span>2</span>Nuts</button>
+                  <button className={`menu-item-content-column2-add-buttons-btn ${addSyrup ? 'chosen' : ''}`} onClick={() => setAddSyrup(!addSyrup)}><span>3</span>Jam</button>
+                </>
+              )
+              }
+                
             </div>
           </div>
 
@@ -77,7 +106,10 @@ export default function MenuItem({ showCard, setCardClicked}) {
           </div>
 
           <div className="menu-item-content-column2-submit">
-              <button className="menu-item-content-column2-submit-btn">Close</button>
+              <button className="menu-item-content-column2-submit-btn" onClick={() => {
+                document.body.classList.remove('lock');
+                setCardClicked(false)
+              }}>Close</button>
           </div>
         </div>
 

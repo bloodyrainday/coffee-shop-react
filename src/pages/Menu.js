@@ -6,6 +6,7 @@ function Menu() {
   const coffee = [
     {
       id: 1,
+      type: "coffee",
       image: require("../images/coffee-1.png"),
       title: "Irish coffee",
       desc: "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
@@ -13,6 +14,7 @@ function Menu() {
     },
     {
       id: 2,
+      type: "coffee",
       image: require("../images/coffee-2.png"),
       title: "Kahlua coffee",
       desc: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
@@ -20,6 +22,7 @@ function Menu() {
     },
     {
       id: 3,
+      type: "coffee",
       image: require("../images/coffee-3.png"),
       title: "Honey raf",
       desc: "Espresso with frothed milk, cream and aromatic honey",
@@ -27,6 +30,7 @@ function Menu() {
     },
     {
       id: 4,
+      type: "coffee",
       image: require("../images/coffee-4.png"),
       title: "Ice cappuccino",
       desc: "Cappuccino with soft thick foam in summer version with ice",
@@ -34,6 +38,7 @@ function Menu() {
     },
     {
       id: 5,
+      type: "coffee",
       image: require("../images/coffee-5.png"),
       title: "Espresso",
       desc: "Classic black coffee",
@@ -41,6 +46,7 @@ function Menu() {
     },
     {
       id: 6,
+      type: "coffee",
       image: require("../images/coffee-6.png"),
       title: "Latte",
       desc: "Espresso coffee with the addition of steamed milk and dense milk foam",
@@ -48,6 +54,7 @@ function Menu() {
     },
     {
       id: 7,
+      type: "coffee",
       image: require("../images/coffee-7.png"),
       title: "Latte macchiato",
       desc: "Espresso with frothed milk and chocolate",
@@ -55,6 +62,7 @@ function Menu() {
     },
     {
       id: 8,
+      type: "coffee",
       image: require("../images/coffee-8.png"),
       title: "Coffee with cognac",
       desc: "Fragrant black coffee with cognac and whipped cream",
@@ -64,6 +72,7 @@ function Menu() {
   const tea = [
     {
       id: 1,
+      type: "tea",
       image: require("../images/tea-1.png"),
       title: "Moroccan",
       desc: "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
@@ -71,6 +80,7 @@ function Menu() {
     },
     {
       id: 2,
+      type: "tea",
       image: require("../images/tea-2.png"),
       title: "Ginger",
       desc: "Original black tea with fresh ginger, lemon and honey",
@@ -78,6 +88,7 @@ function Menu() {
     },
     {
       id: 3,
+      type: "tea",
       image: require("../images/tea-3.png"),
       title: "Cranberry",
       desc: "Invigorating black tea with cranberry and honey",
@@ -85,6 +96,7 @@ function Menu() {
     },
     {
       id: 4,
+      type: "tea",
       image: require("../images/tea-4.png"),
       title: "Sea buckthorn",
       desc: "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
@@ -94,6 +106,7 @@ function Menu() {
   const dessert = [
     {
       id: 1,
+      type: "dessert",
       image: require("../images/dessert-1.png"),
       title: "Marble cheesecake",
       desc: "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
@@ -101,6 +114,7 @@ function Menu() {
     },
     {
       id: 2,
+      type: "dessert",
       image: require("../images/dessert-2.png"),
       title: "Red velvet",
       desc: "Layer cake with cream cheese frosting",
@@ -108,6 +122,7 @@ function Menu() {
     },
     {
       id: 3,
+      type: "dessert",
       image: require("../images/dessert-3.png"),
       title: "Cheesecakes",
       desc: "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
@@ -115,6 +130,7 @@ function Menu() {
     },
     {
       id: 4,
+      type: "dessert",
       image: require("../images/dessert-4.png"),
       title: "Creme brulee",
       desc: "Delicate creamy dessert in a caramel basket with wild berries",
@@ -122,6 +138,7 @@ function Menu() {
     },
     {
       id: 5,
+      type: "dessert",
       image: require("../images/dessert-5.png"),
       title: "Pancakes",
       desc: "Tender pancakes with strawberry jam and fresh strawberries",
@@ -129,6 +146,7 @@ function Menu() {
     },
     {
       id: 6,
+      type: "dessert",
       image: require("../images/dessert-6.png"),
       title: "Honey cake",
       desc: "Classic honey cake with delicate custard",
@@ -136,6 +154,7 @@ function Menu() {
     },
     {
       id: 7,
+      type: "dessert",
       image: require("../images/dessert-7.png"),
       title: "Chocolate cake",
       desc: "Cake with hot chocolate filling and nuts with dried apricots",
@@ -143,6 +162,7 @@ function Menu() {
     },
     {
       id: 8,
+      type: "dessert",
       image: require("../images/dessert-8.png"),
       title: "Black forest",
       desc: "A combination of thin sponge cake with cherry jam and light chocolate mousse",
@@ -169,7 +189,7 @@ function Menu() {
       )}
       <main className='menu'>
         <div className='container'>
-          <h1 className='menu-title'>Behind each of our cups hides an <i>amazing surprise</i></h1>
+          <h1 className='menu-title'>Behind each of our cups <br/>hides an <i>amazing surprise</i></h1>
           
           <div className="menu-tabs">
 
@@ -224,7 +244,7 @@ function Menu() {
               {
                 clicked === 1 && (
                   tea.map((item, index) => (
-                    <div className='menu-collection-item' key={item.id}>
+                    <div className='menu-collection-item' key={item.id} onClick={() => cardClickedButton(item)}>
                       <div className='menu-collection-item-img-wrapper'>
                         <img className='menu-collection-item-img' src={item.image} alt='menu-item'/>
                       </div>
@@ -241,7 +261,7 @@ function Menu() {
               {
                 clicked === 2 && (
                   dessert.map((item, index) => (
-                    <div className='menu-collection-item' key={item.id}>
+                    <div className='menu-collection-item' key={item.id} onClick={() => cardClickedButton(item)}>
                       <div className='menu-collection-item-img-wrapper'>
                         <img className='menu-collection-item-img' src={item.image} alt='menu-item'/>
                       </div>

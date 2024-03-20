@@ -1,6 +1,11 @@
+.menu .container {
+  text-align: center;
+}
+
 .menu-title {
   font-size: 60px;
   line-height: 125%;
+  margin-bottom: 40px;
 }
 
 .menu-title i {
