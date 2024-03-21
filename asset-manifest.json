@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coffee-shop-react/static/css/main.eda78dea.css",
+    "main.css": "/coffee-shop-react/static/css/main.6d83cf77.css",
     "main.js": "/coffee-shop-react/static/js/main.4a3e6f7d.js",
     "static/media/background.mp4": "/coffee-shop-react/static/media/background.81d51f506ae9655f5a99.mp4",
     "static/media/about-4.png": "/coffee-shop-react/static/media/about-4.66ad5f89b945c3796dae.png",
@@ -54,11 +54,11 @@
     "static/media/button-icon-left-hover.svg": "/coffee-shop-react/static/media/button-icon-left-hover.ab22bcacc49b5c94a85b.svg",
     "static/media/button-icon-left.svg": "/coffee-shop-react/static/media/button-icon-left.d13464d46b657af75c22.svg",
     "static/media/button-icon-right-hover.svg": "/coffee-shop-react/static/media/button-icon-right-hover.b17c1da536416e075697.svg",
-    "main.eda78dea.css.map": "/coffee-shop-react/static/css/main.eda78dea.css.map",
+    "main.6d83cf77.css.map": "/coffee-shop-react/static/css/main.6d83cf77.css.map",
     "main.4a3e6f7d.js.map": "/coffee-shop-react/static/js/main.4a3e6f7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.eda78dea.css",
+    "static/css/main.6d83cf77.css",
     "static/js/main.4a3e6f7d.js"
   ]
 }
