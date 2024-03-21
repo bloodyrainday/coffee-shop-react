@@ -166,6 +166,7 @@ a {
 }
 
 .enjoy-offer a {
+  color: #403F3D;
   width: 200px;
 }
 
@@ -180,6 +181,7 @@ a {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease-in;
+  font-size: 16px;
 }
 
 .enjoy-offer-button img {
@@ -631,6 +633,70 @@ a {
 }
 
 /* burger menu end */
+
+@media (hover: hover) {
+  .nav-links-list-link:hover:after {
+    width: 100%;
+  }
+
+  .nav-menu:hover:after {
+    width: 100%;
+  }
+
+  .enjoy-offer-button:hover img {
+    visibility: inherit;
+    margin-right: 0.5px;
+  }
+  
+  .enjoy-offer-button:hover {
+    padding-right: 10px;
+  }
+
+  .arrow.left:hover {
+    background: url('../icons/button-icon-left-hover.svg');
+  }
+  
+  .arrow.right:hover {
+    background: url('../icons/button-icon-right-hover.svg');
+  }
+
+  .cozy-gallery-wrapper img:hover {
+    transform: scale(1.02);
+  }
+
+  .download-column1-button-apple:hover {
+    background: url("../icons/hover-apple.svg");
+  }
+
+  .download-column1-button-google:hover {
+    background: url("../icons/hover-google.svg");
+  } 
+
+  .footer-column1-icons-twit:hover {
+    background: url("../icons/twitter-hover.svg") no-repeat;
+    background-position: center center;
+  }
+
+  .footer-column1-icons-inst:hover {
+    background: url("../icons/instagram-hover.svg") no-repeat;
+    background-position: center center;
+  }
+
+  .footer-column1-icons-fcb:hover {
+    background: url("../icons/instagram-hover.svg") no-repeat;
+    background-position: center center;
+  }
+
+  .footer-column1-icons-twit:hover,
+  .footer-column1-icons-inst:hover,
+  .footer-column1-icons-fcb:hover {
+    background-color: #E1D4C9;;
+  }
+
+  .footer-column2-list-item:hover:after {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1435px) {
   .cozy-gallery {
