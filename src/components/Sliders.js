@@ -15,6 +15,34 @@ const Sliders = ({sliders}) => {
       setActiveIndex(newIndex)
     }
 
+  /* swipe start */
+
+  document.addEventListener('touchstart', handleTouchStart, false);
+  document.addEventListener('touchmove', handleMoveStart, false);
+
+  let x1 = null;
+  
+  function handleTouchStart(event) {
+    const firstTouch = event.touches[0];
+    x1 = firstTouch.clientX;
+  }
+
+  function handleMoveStart(event) {
+    if (!x1) return false;
+    let x2 = event.touches[0].clientX;
+    let differenceX = x2 - x1;
+  
+    if (differenceX > 0) {
+      console.log(Math.abs(differenceX))
+      updateIndex(activeIndex - 1);
+    } else {
+      updateIndex(activeIndex + 1);
+    }
+    
+    x1 = null
+  }
+
+  /* swipe end */
 
     return (
       <div className='favorite-slider'>
