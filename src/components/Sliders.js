@@ -16,20 +16,22 @@ const Sliders = ({sliders}) => {
     }
 
   /* swipe start */
-
-  document.addEventListener('touchstart', handleTouchStart, false);
-  document.addEventListener('touchmove', handleMoveStart, false);
+  
+  // let touchSlider = document.querySelector('.favorite-slider-center');
+  // let moveSlider = document.querySelector('.favorite-slider-center');
+  // document.addEventListener('touchstart', handleTouchStart, false);
+  // document.addEventListener('touchmove', handleMoveStart, false);
 
   let x1 = null;
   
-  function handleTouchStart(event) {
-    const firstTouch = event.touches[0];
+  function handleTouchStart(e) {
+    const firstTouch = e.touches[0];
     x1 = firstTouch.clientX;
   }
 
-  function handleMoveStart(event) {
+  function handleMoveStart(e) {
     if (!x1) return false;
-    let x2 = event.touches[0].clientX;
+    let x2 = e.touches[0].clientX;
     let differenceX = x2 - x1;
   
     if (differenceX > 0) {
@@ -52,7 +54,7 @@ const Sliders = ({sliders}) => {
         </div>
 
 
-        <div className='favorite-slider-center'>
+        <div className='favorite-slider-center' onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleMoveStart(e)}>
           <div className='favorite-slider-center-line' style={{transform: `translate(-${activeIndex * 100}%)`}}>
             <div className='favorite-slider-center-line-slide'>
               {sliders.map((slide) => (
