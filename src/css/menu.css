@@ -452,10 +452,3 @@
     grid-template-columns: repeat(1, 310px);
   }
 }
-
-@media (max-width: 379px) {
-  .enjoy-offer {
-    width: 280px;
-    left: 25px;
-  }
-}
