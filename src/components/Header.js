@@ -23,7 +23,7 @@ function Header() {
             <nav>
 
             <div className='nav-logo'>
-              <Link className='nav-logo-link' to="/coffee-shop-react">
+              <Link className='nav-logo-link' to="/coffee-shop-react" onClick={() => setMenuButtonClicked(false)}>
                 <Image image={logo}/>
               </Link>
             </div>

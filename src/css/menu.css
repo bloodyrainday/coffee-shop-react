@@ -82,7 +82,7 @@
 
 .menu-collection {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 310px);
   gap: 30px;
   margin-top: 40px;
   margin-bottom: 70px;
@@ -104,11 +104,12 @@
 
 .menu-collection-item-img-wrapper img {
   transform: scale(1.1);
+  background-position: center;
 }
 
 .menu-collection-item:hover img {
-  transition: transform 0.5s ease-out;
-  transform: scale(1.0);
+  transition: transform 0.5s ease;
+  transform: scale(1.05);
 }
 
 .menu-collection-item-caption {
@@ -395,4 +396,19 @@
 .menu-item-content-column2-submit-btn:hover {
   color: var(--text-light, #E1D4C9);
   background-color: #665F55;
+}
+
+@media (max-width: 1430px) {
+  .menu-collection {
+    grid-template-columns: repeat(3, 310px);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1125px) {
+  .menu-collection {
+    grid-template-columns: repeat(2, 310px);
+    justify-content: space-around;
+    gap: 40px;
+  }
 }

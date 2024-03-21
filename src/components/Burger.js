@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from './Image';
 import menu from '../icons/coffee-cup.svg';
+import { Link } from 'react-router-dom';
 
 function Burger({onClickBurger}) {
   
@@ -13,10 +14,10 @@ function Burger({onClickBurger}) {
             <a className='burger-list-item-link' href='./#download' onClick={onClickBurger}><li className='burger-list-item'>Mobile app</li></a>
             <a className='burger-list-item-link' href='./#footer' onClick={onClickBurger}><li className='burger-list-item'>Contact us</li></a>
           </ul>
-          <a className='nav-menu-inner' href="/coffee-shop-react/menu" onClick={onClickBurger}>
+          <Link className='nav-menu-inner' to="/menu" onClick={onClickBurger}>
                 <p className='nav-menu-inner-text'>Menu</p>
                 <Image image={menu}/>
-          </a>
+          </Link>
         </div>
       </div>
     )
