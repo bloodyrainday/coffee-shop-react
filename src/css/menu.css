@@ -452,3 +452,12 @@
     grid-template-columns: repeat(1, 310px);
   }
 }
+
+@media (max-width: 379px) {
+  .menu-item-content {
+    width: 285px;
+  }
+  .menu-item-content-column2 {
+    width: 275px;
+  }
+}
