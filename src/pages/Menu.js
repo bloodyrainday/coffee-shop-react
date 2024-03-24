@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/menu.css';
 import MenuItem from '../components/MenuItem';
+import { Link as LinkScroll} from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   const coffee = [
@@ -187,7 +189,7 @@ function Menu() {
       {cardClicked === true && (
         <MenuItem setCardClicked={setCardClicked} showCard={showCard}/>
       )}
-      <main className='menu'>
+      <main className='menu' id='menu'>
         <div className='container'>
           <h1 className='menu-title'>Behind each of our cups <br/>hides an <i>amazing surprise</i></h1>
           

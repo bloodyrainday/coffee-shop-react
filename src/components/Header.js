@@ -4,6 +4,7 @@ import logo from '../icons/logo.svg';
 import menu from '../icons/coffee-cup.svg';
 import Burger from './Burger';
 import { Link } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
 
 function Header() {
     const [burgerActive, setBurgerActive] = React.useState(false);
@@ -30,10 +31,10 @@ function Header() {
 
             <div className='nav-links'>
               <ul className='nav-links-list'>
-                <a className='nav-links-list-link' href='./#favorite'><li className='nav-links-list-link-item'>Favorite coffee</li></a>
-                <a className='nav-links-list-link' href='./#cozy'><li className='nav-links-list-link-item'>About</li></a>
-                <a className='nav-links-list-link' href='./#download'><li className='nav-links-list-link-item'>Mobile app</li></a>
-                <a className='nav-links-list-link' href='./#footer'><li className='nav-links-list-link-item'>Contact us</li></a>
+                <LinkScroll className='nav-links-list-link' to='favorite' smooth={true}  duration={500}><li className='nav-links-list-link-item'>Favorite coffee</li></LinkScroll>
+                <LinkScroll className='nav-links-list-link' to='cozy' smooth={true}  duration={500}><li className='nav-links-list-link-item'>About</li></LinkScroll>
+                <LinkScroll className='nav-links-list-link' to='download' smooth={true}  duration={500}><li className='nav-links-list-link-item'>Mobile app</li></LinkScroll>
+                <LinkScroll className='nav-links-list-link' to='footer' smooth={true}  duration={500}><li className='nav-links-list-link-item'>Contact us</li></LinkScroll>
               </ul>
             </div>
 
