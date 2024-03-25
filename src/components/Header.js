@@ -24,7 +24,7 @@ function Header() {
             <nav>
 
             <div className='nav-logo'>
-              <Link className='nav-logo-link' to="/coffee-shop-react" onClick={() => {setBurgerActive(false); setMenuButtonClicked(false)}}>
+              <Link className='nav-logo-link' to="/coffee-shop-react" onClick={() => {setBurgerActive(false); document.body.classList.remove('lock'); setMenuButtonClicked(false)}}>
                 <Image image={logo}/>
               </Link>
             </div>

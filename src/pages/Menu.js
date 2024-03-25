@@ -1,8 +1,7 @@
 import React from 'react';
 import '../css/menu.css';
 import MenuItem from '../components/MenuItem';
-import { Link as LinkScroll} from 'react-scroll';
-import { Link } from 'react-router-dom';
+
 
 function Menu() {
   const coffee = [
